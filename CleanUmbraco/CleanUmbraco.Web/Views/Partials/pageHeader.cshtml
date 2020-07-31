@@ -1,0 +1,53 @@
+﻿@inherits UmbracoViewPage
+
+@{ 
+    var title = Model.HasValue("title") ? Model.Value("title") : Model.Name;
+    var subtitle = Model.HasValue("subtitle") ? Model.Value<string>("subtitle") : "";
+
+    var image = Model.Value<IPublishedContent>("mainImage", fallback: Fallback.ToAncestors);
+    string imageUrl = "";
+    if(image != null)
+    {
+        imageUrl = image.GetCropUrl(1903, 532);
+    }
+
+    var authorName = Model.HasProperty("authorName") && Model.HasValue("authorName") ? Model.Value<string>("authorName") : "";
+    DateTime articleDate = Model.HasProperty("articleDate") && Model.HasValue("articleDate") ? Model.Value<DateTime>("articleDate") : DateTime.MinValue;
+
+    bool hasAuthordetails = !string.IsNullOrWhiteSpace(authorName) || articleDate != DateTime.MinValue;
+}
+
+<!-- Page Header -->
+<header class="masthead" style="@(!string.IsNullOrWhiteSpace(imageUrl) ? "background-image: url('"+ imageUrl +"')" : null)">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>@title</h1>
+                    @if (!string.IsNullOrWhiteSpace(subtitle))
+                    {
+                        <h2 class="subheading">@subtitle</h2>
+                    }
+                    else
+                    {
+                        <span class="subheading">@subtitle</span>
+                    }
+
+                    @if (hasAuthordetails)
+                    {
+                        <span class="meta">
+                            Posted 
+                            @if (!string.IsNullOrWhiteSpace(authorName))
+                            {
+                                @Html.Raw("by ") @authorName
+                            }
+                             on @articleDate.ToString("MMMM dd, yyyy")
+                        </span>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
