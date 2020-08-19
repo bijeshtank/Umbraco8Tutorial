@@ -294,8 +294,19 @@
     <Content Include="img\post-sample-image.jpg" />
     <Content Include="js\clean-blog.js" />
     <Content Include="js\clean-blog.min.js" />
+    <Content Include="scripts\contactForm.js" />
     <Content Include="js\contact_me.js" />
     <Content Include="js\jqBootstrapValidation.js" />
+    <None Include="scripts\jquery-1.8.0.intellisense.js" />
+    <Content Include="scripts\jquery-1.8.0.js" />
+    <Content Include="scripts\jquery-1.8.0.min.js" />
+    <None Include="scripts\jquery.validate-vsdoc.js" />
+    <Content Include="scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-reboot.css" />
@@ -330,6 +341,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\Models\Article.generated.cs" />
+    <Content Include="App_Code\Models\ArticleControls.generated.cs" />
+    <Content Include="App_Code\Models\ArticleList.generated.cs" />
+    <Content Include="App_Code\Models\Contact.generated.cs" />
+    <Content Include="App_Code\Models\ContactFormControls.generated.cs" />
+    <Content Include="App_Code\Models\Content.generated.cs" />
+    <Content Include="App_Code\Models\ContentControls.generated.cs" />
+    <Content Include="App_Code\Models\Error.generated.cs" />
+    <Content Include="App_Code\Models\File.generated.cs" />
+    <Content Include="App_Code\Models\Folder.generated.cs" />
+    <Content Include="App_Code\Models\FooterControls.generated.cs" />
+    <Content Include="App_Code\Models\HeaderControls.generated.cs" />
+    <Content Include="App_Code\Models\Home.generated.cs" />
+    <Content Include="App_Code\Models\IconLinkItem.generated.cs" />
+    <Content Include="App_Code\Models\Image.generated.cs" />
+    <Content Include="App_Code\Models\MainImageControls.generated.cs" />
+    <Content Include="App_Code\Models\Member.generated.cs" />
+    <Content Include="App_Code\Models\Search.generated.cs" />
+    <Content Include="App_Code\Models\SEocontrols.generated.cs" />
+    <Content Include="App_Code\Models\VisibilityControls.generated.cs" />
+    <Content Include="App_Code\Models\XMlsitemap.generated.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -391,6 +423,9 @@
     <Content Include="Views\Partials\pageHeader.cshtml" />
     <Content Include="Views\error.cshtml" />
     <Content Include="Views\Partials\Grid\Clean.cshtml" />
+    <Content Include="Views\xMLSitemap.cshtml" />
+    <Content Include="Views\Partials\Contact\contactForm.cshtml" />
+    <Content Include="Views\Partials\Contact\result.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
