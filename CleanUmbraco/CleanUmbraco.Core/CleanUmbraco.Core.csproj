@@ -239,6 +239,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Composing\ApplicationComposer.cs" />
     <Compile Include="Composing\RegisterServicesComposer.cs" />
     <Compile Include="Controllers\ContactSurfaceController.cs" />
     <Compile Include="Extensions\HtmlExtensions.cs" />
